@@ -8,7 +8,7 @@ ENV PROJECT_ENV production
 ENV NODE_ENV production
 WORKDIR ./public
 RUN mkdir public
-ADD ./src ./public
+ADD . ./public
 RUN npm install
 CMD cd ./public && echo 'watch file list' && ls && npm run dev
 EXPOSE 8080

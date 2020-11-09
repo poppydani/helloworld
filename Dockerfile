@@ -9,6 +9,6 @@ ENV NODE_ENV production
 RUN mkdir /public
 ADD . /public
 WORKDIR /public
-RUN npm install
+RUN npm install --production
 CMD cd /public && echo 'watch file list' && ls && npm run dev
 EXPOSE 8080

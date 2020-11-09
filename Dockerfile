@@ -10,5 +10,5 @@ RUN mkdir /public
 ADD . /public
 WORKDIR /public
 RUN npm install
-CMD cd ./public && echo 'watch file list' && ls && npm run dev
+CMD cd /public && echo 'watch file list' && ls && npm run dev
 EXPOSE 8080
